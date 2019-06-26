@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nestedScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.Dashboard">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/toolbar" />
+
+        <TextView
+            android:id="@+id/textViewMarketing"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:drawableStart="@drawable/ic_marketing"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/riflo_widgets"
+            android:text="Marketing"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/blue_600"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/grey_300"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewMarketing"
+            app:layout_constraintStart_toStartOf="@+id/textViewMarketing"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMarketing" />
+
+        <TextView
+            android:id="@+id/textViewLeads"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:drawableStart="@drawable/ic_leads"
+            android:drawableEnd="@drawable/ic_open"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="10dp"
+            android:drawableTint="@color/riflo_widgets"
+            android:text="Leads"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/blue_600"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintStart_toStartOf="@id/view"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/grey_300"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewLeads"
+            app:layout_constraintStart_toStartOf="@+id/textViewLeads"
+            app:layout_constraintTop_toBottomOf="@+id/textViewLeads" />
+
+        <TextView
+            android:id="@+id/textViewContact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_contacts"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/riflo_widgets"
+            android:text="Contacts"
+            android:textSize="19sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:drawableEnd="@drawable/ic_open"
+            android:textColor="@color/blue_600"
+            app:layout_constraintEnd_toEndOf="@+id/view2"
+            app:layout_constraintStart_toStartOf="@id/view2"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+        <View
+            android:id="@+id/view3"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/grey_300"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewContact"
+            app:layout_constraintStart_toStartOf="@+id/textViewContact"
+            app:layout_constraintTop_toBottomOf="@+id/textViewContact" />
+        <TextView
+            android:id="@+id/textViewCampaign"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_campaign"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/riflo_widgets"
+            android:text="Campaigns"
+            android:textSize="19sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:drawableEnd="@drawable/ic_open"
+            android:textColor="@color/blue_600"
+            app:layout_constraintEnd_toEndOf="@+id/view3"
+            app:layout_constraintStart_toStartOf="@id/view3"
+            app:layout_constraintTop_toBottomOf="@+id/view3" />
+        <View
+            android:id="@+id/view4"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/grey_300"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewCampaign"
+            app:layout_constraintStart_toStartOf="@+id/textViewCampaign"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCampaign" />
+        <TextView
+            android:id="@+id/textViewOrganization"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_organization"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/riflo_widgets"
+            android:text="Organizations"
+            android:textSize="19sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:drawableEnd="@drawable/ic_open"
+            android:textColor="@color/blue_600"
+            app:layout_constraintEnd_toEndOf="@+id/view4"
+            app:layout_constraintStart_toStartOf="@id/view4"
+            app:layout_constraintTop_toBottomOf="@+id/view4" />
+        <View
+            android:id="@+id/view5"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/grey_300"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewOrganization"
+            app:layout_constraintStart_toStartOf="@+id/textViewOrganization"
+            app:layout_constraintTop_toBottomOf="@+id/textViewOrganization" />
+
+        <TextView
+            android:id="@+id/textViewSales"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:drawableStart="@drawable/ic_sales"
+            android:drawableTint="@color/riflo_widgets"
+            android:textColor="@color/blue_600"
+            android:drawablePadding="8dp"
+            android:text="Sales"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toEndOf="@+id/view5"
+            app:layout_constraintStart_toStartOf="@+id/textViewMarketing"
+            app:layout_constraintTop_toBottomOf="@+id/view5" />
+        <View
+            android:id="@+id/view6"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/grey_300"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewSales"
+            app:layout_constraintStart_toStartOf="@+id/textViewSales"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSales" />
+        <TextView
+            android:id="@+id/textViewQuotation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:drawableStart="@drawable/ic_quotation"
+            android:drawableEnd="@drawable/ic_open"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="10dp"
+            android:drawableTint="@color/riflo_widgets"
+            android:text="Quotes"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/blue_600"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="@+id/view6"
+            app:layout_constraintStart_toStartOf="@id/view6"
+            app:layout_constraintTop_toBottomOf="@+id/view6" />
+        <View
+            android:id="@+id/view7"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/grey_300"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewQuotation"
+            app:layout_constraintStart_toStartOf="@+id/textViewQuotation"
+            app:layout_constraintTop_toBottomOf="@+id/textViewQuotation" />
+        <TextView
+            android:id="@+id/textViewProduction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_production"
+            android:drawableEnd="@drawable/ic_open"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="10dp"
+            android:drawableTint="@color/riflo_widgets"
+            android:text="Products"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/blue_600"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="@+id/view7"
+            app:layout_constraintStart_toStartOf="@id/view7"
+            app:layout_constraintTop_toBottomOf="@+id/view7" />
+        <View
+            android:id="@+id/view8"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/grey_300"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewProduction"
+            app:layout_constraintStart_toStartOf="@+id/textViewProduction"
+            app:layout_constraintTop_toBottomOf="@+id/textViewProduction" />
+        <TextView
+            android:id="@+id/textViewOpportunity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_opportunity"
+            android:drawableEnd="@drawable/ic_open"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="10dp"
+            android:drawableTint="@color/riflo_widgets"
+            android:text="Opportunities"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/blue_600"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="@+id/view8"
+            app:layout_constraintStart_toStartOf="@id/view8"
+            app:layout_constraintTop_toBottomOf="@+id/view8" />
+        <View
+            android:id="@+id/view9"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/grey_300"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewOpportunity"
+            app:layout_constraintStart_toStartOf="@+id/textViewOpportunity"
+            app:layout_constraintTop_toBottomOf="@+id/textViewOpportunity" />
+        <TextView
+            android:id="@+id/textViewWarrant"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_warrants"
+            android:drawableEnd="@drawable/ic_open"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="10dp"
+            android:drawableTint="@color/riflo_widgets"
+            android:text="Warrant Certification"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/blue_600"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="@+id/view9"
+            app:layout_constraintStart_toStartOf="@id/view9"
+            app:layout_constraintTop_toBottomOf="@+id/view9" />
+        <View
+            android:id="@+id/view10"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/grey_300"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewWarrant"
+            app:layout_constraintStart_toStartOf="@+id/textViewWarrant"
+            app:layout_constraintTop_toBottomOf="@+id/textViewWarrant" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
