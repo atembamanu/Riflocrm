@@ -66,7 +66,7 @@ public class Leads extends AppCompatActivity {
             public void onFailure(Call<List<LeadsData>> call, Throwable t) {
                 progressDialog.dismiss();
                 Toast.makeText(Leads.this, "Something went wrong...Please try later!", Toast.LENGTH_SHORT).show();
-                //System.out.println("Error "+ t);
+                //System.out.println("mistake "+ t);
 
 
 
