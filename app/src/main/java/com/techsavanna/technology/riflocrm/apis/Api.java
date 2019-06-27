@@ -3,6 +3,7 @@ package com.techsavanna.technology.riflocrm.apis;
 import com.techsavanna.technology.riflocrm.models.ContactsData;
 import com.techsavanna.technology.riflocrm.models.LeadsData;
 import com.techsavanna.technology.riflocrm.models.LoginResponse;
+import com.techsavanna.technology.riflocrm.models.OrganizationData;
 
 import java.util.List;
 
@@ -32,6 +33,9 @@ public interface Api {
    @GET("getContacts.php")
     Call<List<ContactsData>> getContacts();
 
+   //url maping for Organizations data
+    @GET("getOrganizations.php")
+    Call<List<OrganizationData>> getOrganizations();
 
 
 }

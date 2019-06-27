@@ -63,6 +63,7 @@ public class Contacts extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<ContactsData>> call, Throwable t) {
+                //System.out.println(t.fillInStackTrace());
 
             }
         });

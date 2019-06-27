@@ -31,7 +31,8 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:drawableLeft="@drawable/ic_location" />
             <TextView
                 android:id="@+id/contactLeadStatus"
                 android:layout_width="0dp"
@@ -43,7 +44,8 @@
                 android:textStyle="bold"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 app:layout_constraintEnd_toEndOf="@id/contactName"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:drawableLeft="@drawable/ic_status" />
 
             <TextView
                 android:id="@+id/contactPhone"
@@ -52,7 +54,8 @@
                 android:layout_marginStart="37dp"
                 android:text="+254742687661"
                 app:layout_constraintStart_toStartOf="@id/contactName"
-                app:layout_constraintTop_toBottomOf="@id/contactName" />
+                app:layout_constraintTop_toBottomOf="@id/contactName"
+                android:layout_marginLeft="37dp" />
 
             <TextView
                 android:id="@+id/contactCity"
@@ -62,7 +65,8 @@
                 android:text="Nairobi"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@id/contactPhone"
-                app:layout_constraintTop_toBottomOf="@id/contactName" />
+                app:layout_constraintTop_toBottomOf="@id/contactName"
+                android:layout_marginLeft="16dp" />
 
             <TextView
                 android:id="@+id/contactCountry"
@@ -72,7 +76,8 @@
                 android:text="Kenya"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@id/contactCity"
-                app:layout_constraintTop_toBottomOf="@id/contactName" />
+                app:layout_constraintTop_toBottomOf="@id/contactName"
+                android:layout_marginLeft="8dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 

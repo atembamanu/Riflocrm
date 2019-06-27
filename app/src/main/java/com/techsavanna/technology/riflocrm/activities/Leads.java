@@ -49,7 +49,7 @@ public class Leads extends AppCompatActivity {
 
 
         progressDialog = new ProgressDialog(Leads.this);
-        progressDialog.setMessage("Fetching new Leads....");
+        progressDialog.setMessage("Refreshing Leads...");
         progressDialog.show();
 
         Api service = RetrofitClientInstance.getRetrofitInstance().create(Api.class);

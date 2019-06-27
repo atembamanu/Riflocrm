@@ -1,16 +1,13 @@
 package com.techsavanna.technology.riflocrm.activities;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.widget.TextViewCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.techsavanna.technology.riflocrm.MainActivity;
 import com.techsavanna.technology.riflocrm.R;
 
 public class Dashboard extends AppCompatActivity implements View.OnClickListener {
@@ -100,6 +97,8 @@ public class Dashboard extends AppCompatActivity implements View.OnClickListener
     }
 
     private void manageOrganizations() {
+        Intent intent = new Intent(Dashboard.this, Organization.class);
+        startActivity(intent);
     }
 
     private void manageCampaigns() {

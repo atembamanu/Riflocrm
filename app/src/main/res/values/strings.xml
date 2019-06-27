@@ -3,4 +3,6 @@
     <string name="title_activity_leads">Manage Leads</string>
     <string name="title_add_leads">Add Lead</string>
     <string name="title_activity_contacts">Manage Contacts</string>
+    <string name="title_activity_add_organization">Add Organization</string>
+    <string name="title_activity_manage_organization">Manage Organizations</string>
 </resources>
