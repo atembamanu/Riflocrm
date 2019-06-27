@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/item_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/organizationName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_organization"
+                android:drawablePadding="14dp"
+                android:drawableTint="@color/riflo_widgets"
+                android:text="Techsavana Technology"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:drawableLeft="@drawable/ic_organization" />
+
+            <TextView
+                android:id="@+id/organizationCity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="42dp"
+                android:text="Nairobi"
+                app:layout_constraintStart_toStartOf="@id/organizationName"
+                app:layout_constraintTop_toBottomOf="@id/organizationName"
+                android:layout_marginLeft="42dp" />
+
+            <TextView
+                android:id="@+id/organizationCountry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Kenya"
+                app:layout_constraintStart_toEndOf="@id/organizationCity"
+                app:layout_constraintTop_toBottomOf="@id/organizationName"
+                android:layout_marginLeft="16dp" />
+
+            <TextView
+                android:id="@+id/organizationPhone1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawableTint="@color/riflo_titles"
+                android:drawablePadding="10dp"
+                android:layout_marginStart="42dp"
+                android:text="+254742687661"
+                app:layout_constraintStart_toStartOf="@id/organizationName"
+                app:layout_constraintTop_toBottomOf="@id/organizationCity"
+                android:layout_marginLeft="42dp"
+                android:drawableLeft="@drawable/ic_phone" />
+
+            <TextView
+                android:id="@+id/organizationPhone2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="+254776600988"
+                app:layout_constraintStart_toEndOf="@id/organizationPhone1"
+                app:layout_constraintTop_toBottomOf="@id/organizationCountry"
+                android:layout_marginLeft="16dp" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</FrameLayout>
