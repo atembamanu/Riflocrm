@@ -33,10 +33,11 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 android:gravity="start"
                 android:orientation="horizontal"
                 android:text="@string/title_add_leads"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:layout_marginRight="?attr/actionBarSize" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/btn_search"
+                android:id="@+id/btn_save"
                 style="@style/Widget.AppCompat.ActionButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,35 +59,38 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/toolbar"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
         <LinearLayout
             android:id="@+id/itemsLayout"
-            android:orientation="vertical"
-            android:layout_marginBottom="48dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="48dp"
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/textInputPerson"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:layout_marginTop="10dp"
-                android:textSize="18sp"
-                android:text="Personal Details"
+                android:layout_marginEnd="8dp"
                 android:drawableStart="@drawable/ic_person"
-                android:drawableTint="@color/riflo_widgets"
                 android:drawablePadding="4dp"
-                android:textStyle="bold"
-                android:textColor="@color/riflo_titles" />
+                android:drawableTint="@color/riflo_widgets"
+                android:text="Personal Details"
+                android:textColor="@color/riflo_titles"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
             <View
                 android:id="@+id/view2"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/grey_300"
-                android:layout_marginTop="5dp"
                 android:layout_marginStart="10dp"
-                />
+                android:layout_marginTop="5dp"
+                android:background="@color/grey_300" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputfname"
@@ -99,7 +103,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 android:hint="First Name">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextUser"
+                    android:id="@+id/editTextUser11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -113,14 +117,15 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 style="@style/Widget.Shrine.TextInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
                 android:hint="Last Name">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextUser2"
+                    android:id="@+id/editTextUser21"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
+
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:maxLines="1"
@@ -138,7 +143,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 android:hint="Phone Number">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextPhone"
+                    android:id="@+id/editTextPhone1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -152,13 +157,13 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 style="@style/Widget.Shrine.TextInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
                 android:hint="Primary Email">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextUserEmail"
+                    android:id="@+id/editTextUserEmail1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -168,43 +173,57 @@ xmlns:android="http://schemas.android.com/apk/res/android"
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:id="@+id/textInputAssigned"
+                android:id="@+id/textInputLeadStatus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:textSize="16dp"
-                android:textColorHint="@color/grey_700"
                 android:layout_marginStart="17dp"
-                android:labelFor="@+id/assiged"
-                android:hint="Assigend To"/>
-                <Spinner
-                    android:id="@+id/assiged"
-                    android:layout_marginTop="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                </Spinner>
+                android:layout_marginLeft="17dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:hint="Lead Status"
+                android:labelFor="@+id/status"
+                android:textColorHint="@color/grey_700"
+                android:textSize="16dp" />
+
+            <Spinner
+                android:id="@+id/statusId"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/spinner"
+                android:spinnerMode="dropdown"
+                android:textColor="@color/riflo_titles"/>
+
 
             <TextView
                 android:id="@+id/textInputLocation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:layout_marginTop="24dp"
-                android:textSize="18sp"
-                android:text="Location Details"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:drawableStart="@drawable/ic_location"
-                android:drawableTint="@color/riflo_widgets"
+                android:drawableLeft="@drawable/ic_location"
                 android:drawablePadding="4dp"
-                android:textStyle="bold"
-                android:textColor="@color/riflo_titles" />
+                android:drawableTint="@color/riflo_widgets"
+                android:text="Location Details"
+                android:textColor="@color/riflo_titles"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
             <View
                 android:id="@+id/view1"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/grey_300"
-                android:layout_marginTop="5dp"
                 android:layout_marginStart="10dp"
-                />
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/grey_300" />
+
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputCountry"
                 style="@style/Widget.Shrine.TextInputLayout"
@@ -230,94 +249,112 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 style="@style/Widget.Shrine.TextInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
                 android:hint="City">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editTextCity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:maxLines="1"
                     android:textColor="@color/riflo_titles" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputBox"
-                style="@style/Widget.Shrine.TextInputLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:hint="BOX Number">
+            <!--<com.google.android.material.textfield.TextInputLayout-->
+            <!--android:id="@+id/textInputBox"-->
+            <!--style="@style/Widget.Shrine.TextInputLayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:hint="BOX Number">-->
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextPhoneBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:maxLines="1"
-                    android:textColor="@color/riflo_titles" />
-            </com.google.android.material.textfield.TextInputLayout>
+            <!--<com.google.android.material.textfield.TextInputEditText-->
+            <!--android:id="@+id/editTextPhoneBox"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:inputType="textPersonName"-->
+            <!--android:maxLines="1"-->
+            <!--android:textColor="@color/riflo_titles" />-->
+            <!--</com.google.android.material.textfield.TextInputLayout>-->
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputCode"
-                style="@style/Widget.Shrine.TextInputLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:hint="Postal Code">
+            <!--<com.google.android.material.textfield.TextInputLayout-->
+            <!--android:id="@+id/textInputCode"-->
+            <!--style="@style/Widget.Shrine.TextInputLayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:hint="Postal Code">-->
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextCode"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:maxLines="1"
-                    android:textColor="@color/riflo_titles" />
-            </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputStreet"
-            style="@style/Widget.Shrine.TextInputLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:hint="Street">
+            <!--<com.google.android.material.textfield.TextInputEditText-->
+            <!--android:id="@+id/editTextCode"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:inputType="textPersonName"-->
+            <!--android:maxLines="1"-->
+            <!--android:textColor="@color/riflo_titles" />-->
+            <!--</com.google.android.material.textfield.TextInputLayout>-->
+            <!--<com.google.android.material.textfield.TextInputLayout-->
+            <!--android:id="@+id/textInputStreet"-->
+            <!--style="@style/Widget.Shrine.TextInputLayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:hint="Street">-->
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editTextStreet"
-                android:layout_width="match_parent"
+            <!--<com.google.android.material.textfield.TextInputEditText-->
+            <!--android:id="@+id/editTextStreet"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:ems="10"-->
+            <!--android:inputType="textPersonName"-->
+            <!--android:maxLines="2"-->
+            <!--android:textColor="@color/riflo_titles" />-->
+            <!--</com.google.android.material.textfield.TextInputLayout>-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btntGoogle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:maxLines="2"
-                android:textColor="@color/riflo_titles" />
-        </com.google.android.material.textfield.TextInputLayout>
-            <TextView
-                android:id="@+id/textInputGoogle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="24dp"
-                android:textSize="18sp"
-                android:text="Google Maps"
+                android:layout_marginBottom="10dp"
                 android:drawableStart="@drawable/ic_pin"
-                android:drawableTint="@color/riflo_widgets"
+                android:drawableLeft="@drawable/ic_pin"
                 android:drawablePadding="4dp"
-                android:textStyle="bold"
-                android:textColor="@color/riflo_titles" />
+                android:drawableTint="@color/red_800"
+                android:text="Pin This Location"
+                android:textColor="@color/riflo_titles"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputExactLocation"
+                style="@style/Widget.Shrine.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:hint="Lead Exact Location">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextExactLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:textColor="@color/riflo_titles" />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
         </LinearLayout>

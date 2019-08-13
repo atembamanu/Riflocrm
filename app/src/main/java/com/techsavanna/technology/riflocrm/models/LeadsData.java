@@ -2,15 +2,16 @@ package com.techsavanna.technology.riflocrm.models;
 
 public class LeadsData {
     private int id;
-    private String leadname, leadstatus, mobile, city, country;
+    private String leadname, leadstatus, mobile, city, country, map;
 
-    public LeadsData(int id, String leadname, String leadstatus, String mobile, String city, String country) {
+    public LeadsData(int id, String leadname, String leadstatus, String mobile, String city, String country, String map) {
         this.id = id;
         this.leadname = leadname;
         this.leadstatus = leadstatus;
         this.mobile = mobile;
         this.city = city;
         this.country = country;
+        this.map = map;
     }
 
     public int getId() {
@@ -35,6 +36,10 @@ public class LeadsData {
 
     public String getCountry() {
         return country;
+    }
+
+    public String getMap() {
+        return map;
     }
 }
 

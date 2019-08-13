@@ -33,10 +33,11 @@
                 android:gravity="start"
                 android:orientation="horizontal"
                 android:text="Add Contact"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:layout_marginRight="?attr/actionBarSize" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/btn_search"
+                android:id="@+id/btn_save"
                 style="@style/Widget.AppCompat.ActionButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -78,7 +79,9 @@
                 android:drawableTint="@color/riflo_widgets"
                 android:drawablePadding="4dp"
                 android:textStyle="bold"
-                android:textColor="@color/riflo_titles" />
+                android:textColor="@color/riflo_titles"
+                android:drawableLeft="@drawable/ic_person"
+                android:layout_marginRight="8dp" />
             <View
                 android:id="@+id/view2"
                 android:layout_width="match_parent"
@@ -86,7 +89,7 @@
                 android:background="@color/grey_300"
                 android:layout_marginTop="5dp"
                 android:layout_marginStart="10dp"
-                />
+                android:layout_marginLeft="10dp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputfname"
@@ -138,7 +141,7 @@
                 android:hint="Phone Number">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editTextPhone"
+                    android:id="@+id/editTextUserPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -167,38 +170,49 @@
                     android:textColor="@color/riflo_titles" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/textInputAssigned"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputTitle"
+                style="@style/Widget.Shrine.TextInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:textSize="16dp"
-                android:textColorHint="@color/grey_700"
-                android:layout_marginStart="17dp"
-                android:labelFor="@+id/assiged"
-                android:hint="Assigend To"/>
-            <Spinner
-                android:id="@+id/assiged"
                 android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            </Spinner>
-            <TextView
-                android:id="@+id/textInputOrganizationName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:textSize="16dp"
-                android:textColorHint="@color/grey_700"
-                android:layout_marginStart="17dp"
-                android:labelFor="@+id/organization"
-                android:hint="Organization Name"/>
-            <Spinner
-                android:id="@+id/organization"
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            </Spinner>
+                android:layout_marginStart="8dp"
+                android:hint="Contact Title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextUserTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:textColor="@color/riflo_titles" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--<TextView-->
+                <!--android:id="@+id/textInputOrganizationName"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:textSize="16dp"-->
+                <!--android:textColorHint="@color/grey_700"-->
+                <!--android:layout_marginStart="17dp"-->
+                <!--android:labelFor="@+id/organization"-->
+                <!--android:hint="Organization Name"-->
+                <!--android:layout_marginRight="8dp"-->
+                <!--android:layout_marginLeft="17dp" />-->
+            <!--<Spinner-->
+                <!--android:id="@+id/organization"-->
+                <!--android:layout_marginLeft="17dp"-->
+                <!--android:layout_marginStart="17dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:textColor="@color/riflo_titles"-->
+                <!--android:prompt="Select Organization"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginRight="8dp">-->
+            <!--</Spinner>-->
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/addOrganization"
@@ -209,7 +223,8 @@
                 android:padding="8dp"
                 android:text="Add New Organization"
                 android:background="@color/riflo_widgets"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp" />
 
 
         </LinearLayout>
